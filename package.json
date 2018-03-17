@@ -1,0 +1,28 @@
+{
+  "name": "noto-time",
+  "version": "0.0.5",
+  "description": "A simple time logging module to save time measurements to a db.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camme/noto-time.git"
+  },
+  "keywords": [
+    "time",
+    "log"
+  ],
+  "author": "Camilo Tapia <camilo.tapia@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/camme/noto-time/issues"
+  },
+  "homepage": "https://github.com/camme/noto-time#readme",
+  "dependencies": {
+    "mysql": "2.15.0",
+    "pg": "7.4.1",
+    "sequelize": "4.37.1"
+  }
+}
