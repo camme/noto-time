@@ -1,6 +1,6 @@
 {
   "name": "noto-time",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "description": "A simple time logging module to save time measurements to a db.",
   "main": "index.js",
   "scripts": {

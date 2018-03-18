@@ -55,12 +55,13 @@ This module was created 2018-03-15 so its very very alpha.
 where ```options``` is an object with the following keys:
 
     {
-        connectionUri: [connection uri],
-        service: [string], // defaults to 'noto-test'
-        meta: [object], // defaults to [],
-        saveTimeout: [integer], // how often it should save to the database in ms. Defaults to 5000,
-        enabled: true, // This can be set to false and noto-time will not log anything. It exists so you can have measurements
-                       // that might be turned off in production
+        connectionUri: [connection uri],    // Db connection string
+        service: [string],                  // defaults to 'noto-test'. Name of the service
+        meta: [object],                     // defaults to {},
+        maxTimeout: [integer],              // Max time to log in miliseconds. Defaults to 30000. If the elapsed time is more than this value, we will ignore it.
+        saveTimeout: [integer],             // How often it should save to the database in ms. Defaults to 5000,
+        enabled: [boolean],                 // Defaults to true. This can be set to false and noto-time will not log anything. It exists so you can have measurements
+                                            // that might be turned off in production
 
     }
 
