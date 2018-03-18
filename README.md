@@ -59,6 +59,9 @@ where ```options``` is an object with the following keys:
         service: [string], // defaults to 'noto-test'
         meta: [object], // defaults to [],
         saveTimeout: [integer], // how often it should save to the database in ms. Defaults to 5000,
+        enabled: true, // This can be set to false and noto-time will not log anything. It exists so you can have measurements
+                       // that might be turned off in production
+
     }
 
 
