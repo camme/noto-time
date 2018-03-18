@@ -1,0 +1,29 @@
+version: '2.1'
+services:
+
+    noto-test:
+        build: ../
+        volumes:
+            - ../:/app/src
+        environment:
+            - DB_CONNECTION_URI=postgres://foo:foobarbaz@db/noto
+
+    storage:
+        image: tianon/true
+        volumes:
+            - ./data/db:/var/lib/postgresql
+
+    db:
+        image: postgres:10.3
+        expose:
+            - 5432
+        ports:
+            - 5440:5432
+        volumes_from:
+            - storage
+        environment:
+            - POSTGRES_PASSWORD=foobarbaz
+            - POSTGRES_USER=foo
+            - POSTGRES_DB=noto
+
+ 
